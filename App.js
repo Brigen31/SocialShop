@@ -35,7 +35,7 @@ function TabNavigator() {
         activeTintColor: '#55a3dcff',
         inactiveTintColor: '#808080',
       }}>
-      <Tab.Screen name="Un" component={Un} options={{ headerShown: false }}/> // cacher l'entete
+      <Tab.Screen name="Un" component={Un} options={{ headerShown: false }}/>
       <Tab.Screen name="Deux" component={Deux} />
       <Tab.Screen name="Trois" component={Trois} />
     </Tab.Navigator>
