@@ -4,12 +4,12 @@
     "slug": "snack-cc425b2e-5c50-4604-a373-1e197497217b",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/favicon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#008BFF"
     },
     "assetBundlePatterns": [
       "**/*"

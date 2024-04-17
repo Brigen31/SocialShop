@@ -21,12 +21,21 @@ export const styles = StyleSheet.create({
   paragraph: {
     margin: 24,
     marginTop: 0,
-    fontSize: 14,
+    fontSize: 25,
     fontWeight: 'bold',
     textAlign: 'center',
+  },
+  link: {
+    color: '#008BFF',
   },
   logo: {
     height: 128,
     width: 128,
-  }
+  },
+  flexDirectionRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between', // ou 'space-between'
+    alignItems: 'center',
+    flexWrap: 'wrap', // Ajoutez cette ligne
+  },
 });

@@ -4,43 +4,13 @@ import { View, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Un from './screens/Un';
-import Deux from './screens/Deux';
-import Trois from './screens/Trois';
 import Quatre from './screens/Quatre';
-import { Ionicons } from '@expo/vector-icons';
+import Login from './screens/Login';
+import Menu from './screens/Menu.js';
+import Register from './screens/Register';
 
 const Stack = createStackNavigator();
-const Tab = createBottomTabNavigator();
 
-function TabNavigator() {
-  return (
-    <Tab.Navigator
-      screenOptions={({ route }) => ({
-        tabBarIcon: ({ focused, color, size }) => {
-          let iconName;
-
-          if (route.name === 'Un') {
-            iconName = focused ? 'home' : 'home-outline';
-          } else if (route.name === 'Deux') {
-            iconName = focused ? 'book' : 'book-outline';
-          } else if (route.name === 'Trois') {
-            iconName = focused ? 'person' : 'person-outline';
-          }
-
-          return <Ionicons name={iconName} size={size} color={color} />;
-        },
-      })}
-      tabBarOptions={{
-        activeTintColor: '#55a3dcff',
-        inactiveTintColor: '#808080',
-      }}>
-      <Tab.Screen name="Un" component={Un} options={{ headerShown: false }}/>
-      <Tab.Screen name="Deux" component={Deux} />
-      <Tab.Screen name="Trois" component={Trois} />
-    </Tab.Navigator>
-  );
-}
 
 export default function App() {
   return (
@@ -48,14 +18,24 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
-            name="Un"
-            component={TabNavigator}
+            name="Login"
+            component={Login}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Register"
+            component={Register}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Menu"
+            component={Menu}
             options={{ headerShown: false }}
           />
           <Stack.Screen
             name="Quatre"
             component={Quatre}
-            options={{ headerBackTitleVisible: false }}
+            options={{ headerShown: false }}
           />
         </Stack.Navigator>
       </NavigationContainer>
